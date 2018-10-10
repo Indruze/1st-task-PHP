@@ -1,0 +1,19 @@
+{
+    "name": "indrekrasauskaite/1st-task-php",
+    "description": "NFQ Akademija. First task",
+    "type": "project",
+    "require": {
+        "symfony/console": "^4.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": [
+          "src/functions.php",
+          "src/functions_strict.php"
+        ]
+    }
+}
