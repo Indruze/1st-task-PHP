@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
 
   namespace Nfq\Akademija\Strict {
-    function calculateHomeWorkSum(int...$numbers): int{
+    function calculateHomeWorkSum(int...$numbers): int {
        return array_sum($numbers);
+    }
+    function wrapper(...$numbers): int {
+        return calculateHomeWorkSum(...$numbers);
     }
   }
 

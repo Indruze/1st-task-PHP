@@ -1,13 +1,21 @@
 <?php
 
+  use function Nfq\Akademija\Not_Typed\calculateHomeWorkSum as homeWorkSum;
+  use function Nfq\Akademija\Soft\calculateHomeWorkSum as homeWorkSumSoft;
+  use function Nfq\Akademija\Strict\wrapper as homeWorkSumStrict;
+
   require_once __DIR__ . '/vendor/autoload.php';
 
-  echo \calculateHomeWorkSum(3, 2.2, '1');
+  $result = \calculateHomeWorkSum(3, 2.2, '1');
+  echo "calculateHomeWorkSum: $result";
   echo PHP_EOL;
-  echo Nfq\Akademija\Not_Typed\calculateHomeWorkSum(3, 2.2, '1');
+  $result = homeWorkSum(3, 2.2, '1');
+  echo "Nfq\Akademija\Not_Typed\calculateHomeWorkSum: $result";
   echo PHP_EOL;
-  echo Nfq\Akademija\Soft\calculateHomeWorkSum(3, 2.2, '1');
+  $result = homeWorkSumSoft(3, 2.2, '1');
+  echo "Nfq\Akademija\Soft\calculateHomeWorkSum: $result";
   echo PHP_EOL;
-  echo Nfq\Akademija\Strict\calculateHomeWorkSum(3, 2.2, '1');
+  $result = homeWorkSumStrict(3, 2.2, '1');
+  echo "Nfq\Akademija\Strict\calculateHomeWorkSum: $result";
   echo PHP_EOL;
 ?>
